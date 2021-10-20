@@ -1,3 +1,17 @@
 /* You can add custom styles here. */
 
 // @import "plugins/numbered";
+
+strong {
+    color: rgb(255, 38, 0);
+}
+
+article.markdown h2 {
+    border-bottom: 1px solid rgb(194, 194, 194);
+    padding-bottom: 3px;
+}
+
+article.markdown h3 {
+    border-bottom: 1px dotted rgb(194, 194, 194);
+    padding-bottom: 3px;
+}

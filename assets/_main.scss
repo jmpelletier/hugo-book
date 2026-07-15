@@ -335,6 +335,40 @@ body[dir="rtl"] .book-menu {
   margin-top: $padding-16;
 }
 
+pre.book-code-block {
+  position: relative;
+
+  .book-copy-button {
+    position: absolute;
+    top: $padding-8;
+    right: $padding-8;
+    width: $padding-16 * 2;
+    height: $padding-16 * 2;
+    padding: $padding-4;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: $padding-1 solid var(--gray-300);
+    border-radius: var(--border-radius);
+    background: var(--body-background);
+    background: color-mix(in srgb, var(--body-background) 75%, transparent);
+    color: var(--body-font-color);
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.9;
+
+    img {
+      width: $padding-16;
+      height: $padding-16;
+      filter: var(--icon-filter);
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
 .book-languages {
   margin-bottom: $padding-16;
 

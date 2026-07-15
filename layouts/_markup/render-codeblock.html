@@ -7,4 +7,8 @@
   <a {{ with $href }}href="{{ . }}"{{ end }}>{{ . }}</a>
 </div>
 {{- end -}}
-{{- (transform.HighlightCodeBlock . .Options).Wrapped -}}
+{{- $highlighted := (transform.HighlightCodeBlock . .Options).Wrapped -}}
+{{- if eq (lower .Type) "powershell" -}}
+  {{- $highlighted = replaceRE `<span style="[^"]*">:</span>` `:` $highlighted -}}
+{{- end -}}
+{{- $highlighted | safeHTML -}}
